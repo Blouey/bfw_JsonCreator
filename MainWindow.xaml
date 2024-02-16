@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPF_JsonCreator_2024_02_06.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_JsonCreator_2024_02_06"
+        mc:Ignorable="d"
+        Title="JSON Generator" Height="500" Width="500" ResizeMode="CanResizeWithGrip"
+        Loaded="Window_Loaded">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox Name="VornameTxt" Grid.Row="0" Grid.Column="0"/>                          
+        <Label Name="VornameLbl" Grid.Row="0" Grid.Column="1" Content="Vorname"/>
+        
+        <TextBox Name="NameTxt" Grid.Row="1" Grid.Column="0"/>                          
+        <Label Name="NachnameLbl" Grid.Row="1" Grid.Column="1" Content="Nachname"/>
+        
+        <DatePicker Name="DatePckr" Grid.Row="2" Grid.Column="0" FontSize="24"/>                       
+        <Label Name="DateLbl" Grid.Row="2" Grid.Column="1" Content="Geburtsdatum"/>
+        
+        <Button Name="BtnGenerate" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+                Content="Create JSON" MinWidth="250" Height="75" VerticalAlignment="Center" 
+                HorizontalAlignment="Stretch" Click="BtnCreateJson_Click"/>
+        
+        <TextBox Name="JsonTxt" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                 AcceptsReturn="True" HorizontalScrollBarVisibility="Auto" 
+                 HorizontalContentAlignment="Left"/>
+        
+    </Grid>
+    
+    
+</Window>
